@@ -127,19 +127,19 @@ let g:SuperTabMappingBackward= "<s-tab>"
 
 
 
-if has("cscope")
-	set csprg=/usr/bin/cscope " 指定用来执行cscope的命令
-	set csto=0 " 设置cstag命令查找次序：0先找cscope数据库再找标签文件；1先找标签文件再找cscope数据库
-	set cst " 同时搜索cscope数据库和标签文件
-	set nocsverb
-	if filereadable("cscope.out") " 若当前目录下存在cscope数据库，添加该数据库到vim
-		cs add cscope.out
-		autocmd vimenter * TrinityToggleAll
-	elseif $CSCOPE_DB != "" " 否则只要环境变量CSCOPE_DB不为空，则添加其指定的数据库到vim
-		cs add $CSCOPE_DB
-	endif
-	set csverb
-endif
+"if has("cscope")
+"	set csprg=/usr/local/bin/cscope " 指定用来执行cscope的命令
+"	set csto=0 " 设置cstag命令查找次序：0先找cscope数据库再找标签文件；1先找标签文件再找cscope数据库
+"	set cst " 同时搜索cscope数据库和标签文件
+"	set nocsverb
+"	"if filereadable("cscope.out") " 若当前目录下存在cscope数据库，添加该数据库到vim
+"	"	cs add cscope.out
+"	"	autocmd vimenter * TrinityToggleAll
+"	"elseif $CSCOPE_DB != "" " 否则只要环境变量CSCOPE_DB不为空，则添加其指定的数据库到vim
+"	"	cs add $CSCOPE_DB
+"	"endif
+"	set csverb
+"endif
 
 "map hotkey for cscope
 nmap e :cs find e <cword><CR>
