@@ -1,0 +1,13 @@
+mhan@sh-ae-build104:~/tmp/timer$ sudo insmod timer_module.ko 
+mhan@sh-ae-build104:~/tmp/timer$ dmesg |tail
+[1831076.289003] My module worked!
+[1831076.289005] current jiffies is 4752925037
+[1831086.308895] current jiffies is 4752927544
+mhan@sh-ae-build104:~/tmp/timer$ lsmod |grep timer_mo
+timer_module           16384  0 
+mhan@sh-ae-build104:~/tmp/timer$ sudo rmmod timer_module 
+mhan@sh-ae-build104:~/tmp/timer$ dmesg |tail
+[1831076.289003] My module worked!
+[1831076.289005] current jiffies is 4752925037
+[1831086.308895] current jiffies is 4752927544
+[1831107.407547] Unloading my module.
