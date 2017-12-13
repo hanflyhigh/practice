@@ -1,0 +1,55 @@
+mhan@sh-ae-build104:~/projects/self-practice/practice/network_programming$ ./bin_server1 &
+[1] 20862
+mhan@sh-ae-build104:~/projects/self-practice/practice/network_programming$ ./bin_client &
+[2] 20879
+mhan@sh-ae-build104:~/projects/self-practice/practice/network_programming$ ./bin_client &
+[3] 20886
+mhan@sh-ae-build104:~/projects/self-practice/practice/network_programming$ ./bin_client &
+[4] 20887
+mhan@sh-ae-build104:~/projects/self-practice/practice/network_programming$ ./bin_client &client connected (fd 4), 1 clients connected
+msg from client 20879: This is server 20862
+
+[5] 20888
+mhan@sh-ae-build104:~/projects/self-practice/practice/network_programming$ ./bin_client &
+[6] 20893
+mhan@sh-ae-build104:~/projects/self-practice/practice/network_programming$ client connected (fd 5), 2 clients connected
+msg from client 20886: This is server 20862
+msg from client 20879: This is server 20862
+client connected (fd 6), 3 clients connected
+msg from client 20879: This is server 20862
+msg from client 20886: This is server 20862
+msg from client 20887: This is server 20862
+
+mhan@sh-ae-build104:~/projects/self-practice/practice/network_programming$ client connected (fd 7), 4 clients connected
+msg from client 20886: This is server 20862
+msg from client 20887: This is server 20862
+msg from client 20879: This is server 20862
+msg from client 20888: This is server 20862
+client connected (fd 8), 5 clients connected
+msg from client 20888: This is server 20862
+msg from client 20879: This is server 20862
+msg from client 20887: This is server 20862
+msg from client 20886: This is server 20862
+msg from client 20893: This is server 20862
+
+mhan@sh-ae-build104:~/projects/self-practice/practice/network_programming$ killalmsg from client 20888: This is server 20862
+msg from client 20879: This is server 20862
+msg from client 20893: This is server 20862
+msg from client 20887: This is server 20862
+msg from client 20886: This is server 20862
+l bin_client
+[2]   Terminated              ./bin_client
+[3]   Terminated              ./bin_client
+[4]   Terminated              ./bin_client
+[5]-  Terminated              ./bin_client
+[6]+  Terminated              ./bin_client
+mhan@sh-ae-build104:~/projects/self-practice/practice/network_programming$ 
+mhan@sh-ae-build104:~/projects/self-practice/practice/network_programming$ ps aux|grep server
+mhan     20862  0.0  0.0   4216   636 pts/27   S    16:44   0:00 ./bin_server1
+mhan     20972  0.0  0.0  15956  2292 pts/27   S+   16:44   0:00 grep --color=auto server
+zdu      27600  0.0  0.0  15188  3060 pts/7    S    12月12   0:00 ./httpserver_test
+mhan@sh-ae-build104:~/projects/self-practice/practice/network_programming$ 
+mhan@sh-ae-build104:~/projects/self-practice/practice/network_programming$ ls
+bin_client  bin_server1  build.sh  client.c  server1.c
+mhan@sh-ae-build104:~/projects/self-practice/practice/network_programming$ 
+
