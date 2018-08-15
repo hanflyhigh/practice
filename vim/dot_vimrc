@@ -26,7 +26,7 @@ let g:solarized_visibility = "high"
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set expandtab
+"set expandtab
 "}
 
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
@@ -39,8 +39,8 @@ set hidden
 "set laststatus=2
 set number                                     "显示行号
 "set undofile                                  "无限undo
-set wrap									   "自动换行
-"set nowrap                                    "禁止自动换行
+"set wrap									   "自动换行
+set nowrap                                    "禁止自动换行
 "autocmd! bufwritepost _vimrc source %         "自动载入配置文件不需要重启
 
 "相对行号 要想相对行号起作用要放在显示行号后面
